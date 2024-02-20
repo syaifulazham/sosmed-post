@@ -6,6 +6,7 @@ exports.displayCreateForm = (req, res) => {
 
 exports.createPost = (req, res) => {
   // Logic to insert post into database
+  console.log('req body...',req);
   const { title, content, image_urls, video_urls } = req.body;
   const query = "INSERT INTO sosmed_posts (title, content, image_urls, video_urls, status) VALUES (?, ?, ?, ?, 'draft')";
   
